@@ -191,7 +191,7 @@ rules:
 
 # register for cc
 
-- rule: Activate phone form for product updates
+- rule: Activate phone form for credit card registeration 
   steps:
   - intent: credit_registeration
   - action: action_deactivate_loop
@@ -199,7 +199,7 @@ rules:
   - action: credit_form
   - active_loop: credit_form
 
-- rule: Submit updates form, survey complete
+- rule: Submit credit card registeration form, survey complete
   condition:
   - active_loop: credit_form
   - slot_was_set:
@@ -209,7 +209,7 @@ rules:
   - active_loop: null
   - action: utter_credit_registeration_finish
 
-- rule: Submit updates form, needs survey
+- rule: Submit credit card registeration form, needs survey
   condition:
   - active_loop: credit_form
   steps:
@@ -219,7 +219,7 @@ rules:
   - action: survey_form
   - active_loop: survey_form
 
-- rule: user uses negation to cancel out of product updates
+- rule: user uses negation to cancel out of credit card registeration
   condition:
   - active_loop: credit_form
   steps:
@@ -234,7 +234,7 @@ rules:
 
 # pay bills
 
-- rule: Activate phone form for product updates
+- rule: Activate phone form for pay bills
   steps:
   - intent: pay_bills
   - action: action_deactivate_loop
@@ -242,7 +242,7 @@ rules:
   - action: pay_bills_form
   - active_loop: pay_bills_form
 
-- rule: Submit updates form, survey complete
+- rule: Submit pay bills form, survey complete
   condition:
   - active_loop: pay_bills_form
   - slot_was_set:
@@ -252,7 +252,7 @@ rules:
   - active_loop: null
   - action: utter_pay_bills_finish
 
-- rule: Submit updates form, needs survey
+- rule: Submit pay bills form, needs survey
   condition:
   - active_loop: pay_bills_form
   steps:
@@ -262,7 +262,7 @@ rules:
   - action: survey_form
   - active_loop: survey_form
 
-- rule: user uses negation to cancel out of product updates
+- rule: user uses negation to cancel out of pay bills
   condition:
   - active_loop: pay_bills_form
   steps:

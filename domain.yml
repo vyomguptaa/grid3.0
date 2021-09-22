@@ -85,17 +85,17 @@ responses:
       recent orders in your account history.
   utter_ask_return_form_phone:
   - text: Let's start that return. To help find your order, can you please provide
-      your phone address?
+      your contact number?
   utter_return_finish:
   - text: Ok, I've kicked off your return. You should be receiving a return label
       in your inbox. Please send it in the next 14 days!
   utter_ask_product_updates_form_phone:
   - text: I can keep you up to date with our weekly e-mail about product updates! If
-      you'd like to be added to the list, please add your phone address.
+      you'd like to be added to the list, please add your contact number.
   utter_product_updates_finish:
   - text: Alright, you're subscribed!
   utter_ask_credit_registeration_form_phone:
-  - text: I can help you register for the Flipkart Axis Credit Card which offers you unlimited cashbacks on some of the most popular apps. To begin with I would like to know your phone address or contact number so I can send you the further details.
+  - text: I can help you register for the Flipkart Axis Credit Card which offers you unlimited cashbacks on some of the most popular apps. To begin with I would like to know your contact number so I can send you the further details.
   utter_credit_registeration_finish:
   - text: Alright, I've registered your application for the Flipkart Axis Credit Card. You will be reach out soon for further processes.
   utter_ask_pay_bills_form_phone:
@@ -196,27 +196,42 @@ forms:
       phone:
       - entity: phone
         type: from_entity
+      - intent:
+        - inform
+        type: from_text
   return_form:
     required_slots:
       phone:
       - entity: phone
         not_intent: product_updates
         type: from_entity
+      - intent:
+        - inform
+        type: from_text
   product_updates_form:
     required_slots:
       phone:
       - entity: phone
         type: from_entity
+      - intent:
+        - inform
+        type: from_text
   credit_form:
     required_slots:
       phone:
       - entity: phone
         type: from_entity
+      - intent:
+        - inform
+        type: from_text
   pay_bills_form:
     required_slots:
       phone:
       - entity: phone
         type: from_entity
+      - intent:
+        - inform
+        type: from_text
   product_stock_form:
     required_slots:
       size:
