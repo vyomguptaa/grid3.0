@@ -66,84 +66,114 @@ responses:
       title: Register for Flipkart Axis Credit Card for more benefits
     - payload: How do I pay my Credit Card Bills?
       title: How do I pay my Credit Card Bills?
-    text: Hi there! I'm a your flipbot assistant. How
-      can I help you?
+    text: Hey I am Flippy, your personalized voice assistant. How can I help you today?
   utter_default:
   - text: I don't think I understand. Can you try providing more detail?
   - text: um, what did you just say to me?
-  - text: beep, boop, don't understand
+  - text: Sorry I didn't get you
+  - text: Sorry, I didn't understand
+  - text: Sorry, I didn't catch that
+  - text: Could you please repeat that?
+  - text: Would you mind repeating that?
   utter_ask_order_status_form_phone:
   - text: I can help you find the status of your order. What's your contact number,
       so I can find the order?
+  - text: I can assist you in finding the status of your order. Can you please provide your contact number?
   utter_order_status:
   - text: Based on the latest order from {phone}, it looks like your order is currently {status}.
   utter_ask_cancel_form_phone:
   - text: Sorry to hear you want to cancel! To help find your order, can you please
       provide your contact number?
+  - text: Are you sure you want to cancel the order? To process the order cancellation, may I please have your
+      contact number?
   utter_order_cancel_finish:
   - text: Ok, I've cancelled the order for {phone}. If you'd like to reorder, please visit your
       recent orders in your account history.
+  - text: Your order {order_number} has been cancelled. You can visit the website to look for more products and discounts.
   utter_ask_return_form_phone:
   - text: Let's start that return. To help find your order, can you please provide
       your contact number?
+  - text: To start processing return of your order, may I have your contact number please?
   utter_return_finish:
   - text: Ok, I've kicked off your return. You should be receiving a return label
       in your inbox. Please send it in the next 14 days!
   utter_ask_product_updates_form_phone:
   - text: I can keep you up to date with our weekly e-mail about product updates! If
       you'd like to be added to the list, please add your contact number.
+  - text: Enjoy 10% off your order when you subscribe to our weekly mailing list. If you'd like to be a part of this community, please provide your contact number
+  - text: Can you keep a secret? We can't... Sign up to our mailing list to get latest updates on new products and discounts. Join us
+      by providing your contact number.
+  - text: Be the first to know! Join our weekly email about product updates and discounts! Please provide your contact number for the same.
   utter_product_updates_finish:
   - text: Alright, you're subscribed!
+  - text: Yay, you're subscribed!
+  - text: Cheers! You're subscribed!
+  - text: The journey awaits you! See you there!
   utter_ask_credit_registeration_form_phone:
-  - text: I can help you register for the Flipkart Axis Credit Card which offers you unlimited cashbacks on some of the most popular apps. To begin with I would like to know your contact number so I can send you the further details.
+  - text: I can help you register for the Flipkart Axis Credit Card which offers you unlimited cashbacks on some of the most popular apps an exclusive offers on purchase of products . To begin with I would like to know your contact number so I can send you the further details.
   utter_credit_registeration_finish:
   - text: Alright, I've registered your application for the Flipkart Axis Credit Card. You will be reach out soon for further processes.
   utter_ask_pay_bills_form_phone:
-  - text: I can guide you through the process of paying your Credit Card bills. 
+  - text: I can guide you through the process of paying your Credit Card bills. Kindly provide your contact number.
+  - text: I can assist you in paying your credit card bills. Can I have your contact number please?
+  - text: I'm here to guide you through the process of paying the credit card bills. PLease provide your contact number.
   utter_pay_bills_finish:
-  - text: You can pay through EMI or Netbanking. And for more further details on the payment process, please visit our banks website for more details.
-  
+  - text: You can pay through EMI or Netbanking. And for more further details on the payment process, please visit your bank's website.
+  - text: The payment can be done through EMI or Netbanking. For futher details, please visit your bank's website.
+  - text: You have the following payment methods: EMI and Netbanking. Kindly visit your bank's website for more details.
   utter_product_stock_start:
   - text: I can help you find some shoes!
   utter_ask_product_stock_form_size:
   - text: What size shoe would you like?
+  - text: What's your shoe size?
   utter_ask_product_stock_form_color:
   - text: What color are you looking for?
+  - text: Which color shoes do you prefer buying?
   utter_product_stock_finish:
   - text: Looks like we have size {size} {color} shoes in stock!
+  - text: Yay! We have the size {size} {color} that you want!
+  - text: Hurray! We have those {size} {color} pair of shoes in stock!
   utter_confirm_phone:
   - text: I already have your phone on file. Would you like me to look up your order
       under {phone}?
   utter_faq/alternate_info:
   - text: Currenty we can only provide order information based on phone.
   utter_faq/sizing_clarification:
-  - text: Right now we only offer American sizes. We'll try to change this in the
+  - text: Right now we only offer American sizes. We'll try incorporating other size charts in the near
       future!
   utter_faq/payment_methods:
-  - text: We accept all major credit cards, Apple Pay, Google Pay, and PayPal.
+  - text: We accept all major credit cards, Apple Pay, Google Pay, PayPal and cash on delivery.
   utter_faq/promotions:
-  - text: Currently, we're running a buy one get one half off promotion!
+  - text: Currently, we're running a buy one get one free promotion!
+  - text: We're having 10% off on Adidas shoes for 15 days.
+  - text: Enjoy 20% off on all orders above Rs3000!
   utter_chitchat/thanks:
-  - text: No problem!
-  - text: I have no choice but to help you.
-  - text: I try my best
+  - text: I'm happy to be of service!
+  - text: It is my job to assist you, you're most welcome!
+  - text: Happy I could be of help!
+  - text: It is my pleasure!
+  - text: I'm glad to hear everything worked out well!
   utter_chitchat/confirm_presence:
-  - text: yep I'm here.
-  - text: unfortunately, I'm still listening.
+  - text: Yea I'm still here!
+  - text: I'm still listening.
+  - text: I'm there with you.
+  - text: I'm here to help you.
   utter_chitchat/capabilities:
-  - text: I can help you start a return, subscribe to our e-mails, and even see if
-      we carry your desired shoes.
+  - text: I can help you find your order,start a return, subscribe to our e-mails, find the best promotions and discounts,even see if
+      we carry your desired shoes and cancel your ongoing order.
   utter_chitchat/mood_great:
   - text: Superb!
-  - text: right on
+  - text: That's great!
+  - text: I'm happy to hear that!
   utter_chitchat/mood_unhappy:
-  - text: sorry to hear that :(
-  - text: ok can you be nice to me
+  - text: Sorry to hear that :(
+  - text: Let me tell you a joke to lighten your mood. I heard it was a terrible summer for Humpty Dumpty. But he had a great fall.
   utter_chitchat/bot_challenge:
-  - text: I'm a bot, built using Rasa! Beep boop
+  - text: I'm a bot, built by 404 Found! Beep Bop!
   utter_chitchat/goodbye:
   - text: bye bye
-  - text: c u l8er allig8er
+  - text: Hope to see you again!
+  - text: Come back soon!
   utter_ask_survey_form_rating:
   - buttons:
     - payload: '1'
@@ -158,23 +188,35 @@ responses:
       title: '5'
     text: On a scale of 1-5, how would you rate your conversation today?
   utter_ask_survey_form_open_feedback:
-  - text: Is there any other feedback you can provide?
+  - text: We are constantly striving to provide the ideal experience for our customers, and your input helps us to define that experience.
+        With that being said, how would you rate your conversation with us today?
+  - text:	Thank you for shopping with us! Please take a moment to leave a feedback so we can make your experience even better.
+  - text: We at Flipkart value your opinion. Please help us to improve your experience by giving your valuable feedback.
+  - text: Thank you for trusting us! Every customer matters, please let us know how we did.
+  - text: Is there any other feedback you can provide? This will help us improvise.
   utter_survey_end:
-  - text: Thank you for the feedback!
+  - text: We really appreciate the time you took to help us improve our service. Thanks for being an awesome customer!
+  - text: Thank you for the feedback. We hope your experience was excellent and we can’t wait to see you again soon.
   utter_start_over:
   - text: Ok, let's start over.
   utter_open_feedback: #this is to test the response was collected
   - text: Here's your lovely feedback - {open_feedback}
+  - text: Here's you valuable feedback - {open_feedback}
   utter_no_order:
-  - text: Hmm, seems like we don't have an order associated with that phone
+  - text: Hmm, seems like we don't have an order associated with that contact number.
   utter_in_stock:
   - text: You're in luck! We have those in stock.
+  - text: Looks like we have size {size} {color} shoes in stock!
+  - text: Yay! We have the size {size} {color} that you want!
+  - text: Hurray! We have those {size} {color} pair of shoes in stock!
   utter_no_stock:
   - text: Sorry, seems like we don't have those shoes.
+  - text: We don't have those in stock. Better luck next time!
+  - text: Oh no! We regret to inform you that we dont have that product in stock!
   utter_order_shoes:
-  - text: Sorry, I can't actually help you order the shoes. Please visit our 
-      site to buy some nice shoes! I can help you check inventory, see the 
-      status of an order or even make a change to that order.
+  - text: Sorry, I can't actually help you order the shoes. Please visit our
+      site to buy some nice shoes! I can help you check inventory, see the
+      status of an order or even make a change to that order. 
 actions:
 - action_product_search
 - action_survey_submit
