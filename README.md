@@ -1,6 +1,6 @@
-# Retail Example Bot
+# Flippy - Your personalized voicebot
 
-This is a sample retail bot to help provide starter content, examples of how to implement particular features, and sample use cases. Built using Rasa 2.3.1
+This bot can help you find your order,start a return, subscribe to our e-mails, find the best promotions and discounts,even see if we carry your desired shoes and cancel your ongoing order. Built using Rasa 2.3.1
 
 ## Install dependencies
 
@@ -17,14 +17,21 @@ Then, to run, first set up your action server in one terminal window:
 ```bash
 rasa run actions
 ```
+Then, to run the server in another terminal window:
+```bash
+rasa run
+```
 
 In another window, run the duckling server (for entity extraction):
 ```bash
 docker run -p 8000:8000 rasa/duckling
 ```
-
-Then talk to your bot by running:
+Then to connect the rasa model through Aimybox to run the voicebot(in another terminal window):
+```bash
+ngrok http 5005
 ```
+To talk to your rasa model as a chatbot run:
+```bash
 rasa shell --debug
 ```
 
