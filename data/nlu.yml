@@ -13,11 +13,13 @@ nlu:
     - where is my order?
     - I want to check the status of my order
     - actually can I check the status of my order
-    - order status for example@rasa.com
+    - order status for 935 692 7800
+    - order status for 9356 927 800
 - intent: order_cancel
   examples: |
     - i'd like to cancel my order
-    - cancel my shoes
+    - Cancel my recent purchase.
+    - I'd like to cancel my recent purchase.
     - I changed my mind on my order
     - cancel my order
 - intent: return
@@ -52,7 +54,7 @@ nlu:
 
 - intent: credit_registeration
   examples: |
-    - I'd like to register my credit card
+    - I'd like to register for credit card
     - register my credit card
     - register my credit card please
 - intent: pay_bills
@@ -60,6 +62,7 @@ nlu:
     - how do I pay my credit card pay bills
     - how do I pay my bills
     - how do I clear off my credit card balance
+    - What are the options to pay my credit card bills?
 
 - intent: inform
   examples: |
@@ -78,19 +81,22 @@ nlu:
     - 817 1427 101
     - gray
     - [Maize](color) and [blue](color)
-    - wait actually that phone is wrong. it should be asdf1@asdf.com
-    - asdf@asdf.com
+    - wait actually that contact number is wrong. It should be 935 692 7800
+    - wait actually that contact number is wrong. It should be 9356 927 800
     - [Grey](color)
-    - test@test.com
+
 - intent: order_shoes
   examples: |
-    - i want to buy shoes
-    - no, don't want to do a return, want to purchase new shoes
+    - I want to buy shoes
+    - no, don't want to do a return, I want to purchase new shoes
     - since they're in stock, how about I place an order
+    - I want to purchase new shoes
+
 - intent: affirm
   examples: |
     - yes
     - y
+    - Go ahead
     - indeed
     - of course
     - that sounds good
@@ -106,10 +112,11 @@ nlu:
     - not really
     - Nah, I would not like to be added to the list
     - nope
-    - u stink
+
 - intent: greet
   examples: |
     - hey
+    - heya
     - hello
     - hi
     - hello there
@@ -129,11 +136,12 @@ nlu:
     - hallo?
 - intent: faq/alternate_info
   examples: |
-    - Can I provide a phone number instead?
-    - Can anyone look up my status with my e-mail address?
+    - Can I provide a contact number instead?
+    - Can anyone look up my status with my contact number?
 - intent: faq/sizing_clarification
   examples: |
     - American or european sizing?
+    - What size chart you follow?
 - intent: faq/payment_methods
   examples: |
     - what kind of payment methods do you offer?
@@ -141,20 +149,36 @@ nlu:
 - intent: faq/promotions
   examples: |
     - what kind of deals do you have
-    - are you running anything for black friday
+    - What are the offers running right now?
+    - Tell me the offers going on right now
+    - I want to know about the latest offers and promotions
 - intent: chitchat/thanks
   examples: |
     - thx
     - Awesome, thanks!
     - thanks mate
     - thank you
+    - thanks
+    - Thank youuuu
+    - Thank u
+    - Thnk u
+
 - intent: chitchat/confirm_presence
   examples: |
     - are you there?
+    - Is anyone here?
+    - Still here?
+    - Are you still there?
+    - Am I talking to myself?
+    - Am I still talking to flippy?
+    - Flippy, you there?
 - intent: chitchat/capabilities
   examples: |
     - What else can you do?
     - what can you do?
+    - What other things can you do?
+    - What are you offering?
+    - What all can you do?
 - intent: chitchat/mood_great
   examples: |
     - perfect
@@ -172,6 +196,10 @@ nlu:
     - so good
     - so perfect
     - cool beans
+    - I am good
+    - I am feeling Happy
+    - I'm Happy
+    - I'm feeling amzing
 - intent: chitchat/mood_unhappy
   examples: |
     - my day was horrible
@@ -189,13 +217,18 @@ nlu:
     - so saad
     - so sad
     - this is not working
-    - you suck
+    - Things are not going well
 - intent: chitchat/bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - Who am I talking to?
+    - Is this a human?
+    - Is this a bot?
+    - Who are you?
+    - With whom am i talking?
 - intent: chitchat/goodbye
   examples: |
     - cu
@@ -208,6 +241,12 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - Biee
+    - Have a lovely day
+    - I'll see you later
+    - Ta ta
+    - Doodles
+
 - intent: out_of_scope
   examples: |
     - mmm I can't see what you're saying
@@ -229,7 +268,18 @@ nlu:
     - what is the weather
     - why is the sky blue
     - blah blah blah
+    - Who is Narendra Modi
+    - I am hungry
+    - I want to go shopping
+    - I want a new car
+    - Let's play
+    - I want to order food
+    - I want to swim
+    - huehhuehue
+    - When will the college reopen?
 - intent: whats_your_name
   examples: |
     - can you tell me your name?
     - what's your name?
+    - May I know your name please?
+    - I can call you by?
