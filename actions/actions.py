@@ -79,11 +79,11 @@ class OrderStatus(Action):
         connection = sqlite3.connect(path_to_db)
         cursor = connection.cursor()
 
-        # get email slot
-        order_email = (tracker.get_slot("email"),)
+        # get phone slot
+        order_phone = (tracker.get_slot("phone"),)
 
-        # retrieve row based on email
-        cursor.execute("SELECT * FROM orders WHERE order_email=?", order_email)
+        # retrieve row based on phone
+        cursor.execute("SELECT * FROM orders WHERE order_phone=?", order_phone)
         data_row = cursor.fetchone()
 
         if data_row:
@@ -95,7 +95,7 @@ class OrderStatus(Action):
             connection.close()
             return []
         else:
-            # db didn't have an entry with this email
+            # db didn't have an entry with this phone
             dispatcher.utter_message(template="utter_no_order")
             connection.close()
             return []
@@ -116,17 +116,17 @@ class CancelOrder(Action):
         connection = sqlite3.connect(path_to_db)
         cursor = connection.cursor()
 
-        # get email slot
-        order_email = (tracker.get_slot("email"),)
+        # get phone slot
+        order_phone = (tracker.get_slot("phone"),)
 
-        # retrieve row based on email
-        cursor.execute("SELECT * FROM orders WHERE order_email=?", order_email)
+        # retrieve row based on phone
+        cursor.execute("SELECT * FROM orders WHERE order_phone=?", order_phone)
         data_row = cursor.fetchone()
 
         if data_row:
             # change status of entry
-            status = [("cancelled"), (tracker.get_slot("email"))]
-            cursor.execute("UPDATE orders SET status=? WHERE order_email=?", status)
+            status = [("cancelled"), (tracker.get_slot("phone"))]
+            cursor.execute("UPDATE orders SET status=? WHERE order_phone=?", status)
             connection.commit()
             connection.close()
 
@@ -134,7 +134,7 @@ class CancelOrder(Action):
             dispatcher.utter_message(template="utter_order_cancel_finish")
             return []
         else:
-            # db didn't have an entry with this email
+            # db didn't have an entry with this phone
             dispatcher.utter_message(template="utter_no_order")
             connection.close()
             return []
@@ -155,17 +155,17 @@ class ReturnOrder(Action):
         connection = sqlite3.connect(path_to_db)
         cursor = connection.cursor()
 
-        # get email slot
-        order_email = (tracker.get_slot("email"),)
+        # get phone slot
+        order_phone = (tracker.get_slot("phone"),)
 
-        # retrieve row based on email
-        cursor.execute("SELECT * FROM orders WHERE order_email=?", order_email)
+        # retrieve row based on phone
+        cursor.execute("SELECT * FROM orders WHERE order_phone=?", order_phone)
         data_row = cursor.fetchone()
 
         if data_row:
             # change status of entry
-            status = [("returning"), (tracker.get_slot("email"))]
-            cursor.execute("UPDATE orders SET status=? WHERE order_email=?", status)
+            status = [("returning"), (tracker.get_slot("phone"))]
+            cursor.execute("UPDATE orders SET status=? WHERE order_phone=?", status)
             connection.commit()
             connection.close()
 
@@ -173,7 +173,7 @@ class ReturnOrder(Action):
             dispatcher.utter_message(template="utter_return_finish")
             return []
         else:
-            # db didn't have an entry with this email
+            # db didn't have an entry with this phone
             dispatcher.utter_message(template="utter_no_order")
             connection.close()
             return []

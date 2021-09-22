@@ -13,22 +13,28 @@ c = conn.cursor()
 
 # EXISTING ORDERS
 # Create table
-c.execute('''CREATE TABLE orders
-             (order_date, order_number, order_email, color, size, status)''')
+c.execute('''CREATE TABLE IF NOT EXISTS orders
+             (order_date, order_number, order_phone, color, size, status)''')
 
 # data to be added
-purchases = [('2006-01-05',123456,'example@rasa.com','blue', 9, 'shipped'),
-             ('2021-01-05',123457,'me@rasa.com','black', 10, 'order pending'),
-             ('2021-01-05',123458,'me@gmail.com','gray', 11, 'delivered'),
-             ('2021-01-05',123458, 'me@jpmc.com', 'green', 11, 'delivered'),
-            ]
+# purchases = [('2006-01-05',123456,'example@rasa.com','blue', 9, 'shipped'),
+#              ('2021-01-05',123457,'me@rasa.com','black', 10, 'order pending'),
+#              ('2021-01-05',123458,'me@gmail.com','gray', 11, 'delivered'),
+#              ('2021-01-05',123459,'me@jpmc.com', 'green', 10, 'delivered'),
+#              ('2021-01-05',123460,'hello@hotstar.com','black', 11, 'shipped'),
+#             ]
+purchases = [('2021-4-21', 171126, '9356 927 800', 'black',8,'order pending'),
+             ('2021-4-21', 171126, '935 692 7800', 'blue', 10, 'shipped'),
+             ('2021-4-21', 171126, '8171 427 101', 'gray', 9, 'delivered'),
+             ('2021-4-21', 171126, '817 1427 101', 'black', 11, 'shipped'),
+]
 
 # add data
 c.executemany('INSERT INTO orders VALUES (?,?,?,?,?,?)', purchases)
 
 # AVAILABLE INVENTORY
 # Create table
-c.execute('''CREATE TABLE inventory
+c.execute('''CREATE TABLE IF NOT EXISTS inventory
              (size, color)''')
 
 # data to be added

@@ -63,20 +63,22 @@ nlu:
 
 - intent: inform
   examples: |
-    - example@rasa.com
-    - my email is example@yahoo.com
-    - it's example@gmail.com
+    - 8171 427 101
+    - my phone is 8171 427 101
+    - it's 8171 427 101
     - [black](color) shoes
     - [white](color) ones
     - I'm looking for [orange](color) shoes
     - [brown](color)
     - [blue](color)
     - it's 123
-    - it's a@b.com
-    - xyz@hulaloo.ai
+    - it's 9356 927 800
+    - 935 692 7800
+    - 9356 927 800
+    - 817 1427 101
     - gray
     - [Maize](color) and [blue](color)
-    - wait actually that email is wrong. it should be asdf1@asdf.com
+    - wait actually that phone is wrong. it should be asdf1@asdf.com
     - asdf@asdf.com
     - [Grey](color)
     - test@test.com

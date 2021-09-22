@@ -37,9 +37,9 @@ stories:
   - active_loop: order_status_form
   - intent: inform
     user: |-
-      it's [example@rasa.com](email)
+      it's [8171 427 101](phone)
   - slot_was_set:
-    - email: example@rasa.com
+    - phone: 8171 427 101
   - action: order_status_form
   - active_loop: null
   - action: action_order_status
@@ -71,9 +71,9 @@ stories:
   - active_loop: cancel_form
   - intent: inform
     user: |-
-      it's [example@rasa.com](email)
+      it's [8171 427 101](phone)
   - slot_was_set:
-    - email: example@rasa.com
+    - phone: 8171 427 101
   - action: cancel_form
   - active_loop: null
   - action: action_cancel_order
@@ -90,9 +90,9 @@ stories:
   - active_loop: return_form
   - intent: inform
     user: |-
-      it's [example@rasa.com](email)
+      it's [8171 427 101](phone)
   - slot_was_set:
-    - email: example@rasa.com
+    - phone: 8171 427 101
   - action: return_form
   - active_loop: null
   - action: action_return
@@ -109,9 +109,9 @@ stories:
   - active_loop: product_updates_form
   - intent: inform
     user: |-
-      it's [example@rasa.com](email)
+      it's [8171 427 101](phone)
   - slot_was_set:
-    - email: example@rasa.com
+    - phone: 8171 427 101
   - action: product_updates_form
   - active_loop: null
   - action: utter_product_updates_finish

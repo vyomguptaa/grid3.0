@@ -20,7 +20,7 @@ intents:
 - nlu_fallback
 - whats_your_name
 entities:
-- email
+- phone
 - color
 - number
 - negation
@@ -28,7 +28,7 @@ slots:
   color:
     type: text
     influence_conversation: false
-  email:
+  phone:
     type: text
     influence_conversation: false
   size:
@@ -45,7 +45,7 @@ slots:
   requested_slot:
     type: any
     influence_conversation: false
-  verified_email:
+  verified_phone:
     type: bool
     influence_conversation: true
   survey_complete:
@@ -56,52 +56,52 @@ responses:
   - buttons:
     - payload: Check status of my order
       title: Check status of my order
-    - payload: Start a return
+    - payload: Start a return of your order
       title: Start a return
-    - payload: Check inventory
-      title: Check inventory
+    - payload: Check inventory for shoes
+      title: Check inventory for shoes
     - payload: Subscribe to product updates
       title: Subscribe to product updates
     - payload: Register for credit
-      title: Register for credit
+      title: Register for Flipkart Axis Credit Card for more benefits
     - payload: How do I pay my Credit Card Bills?
       title: How do I pay my Credit Card Bills?
-    text: Hi there! I'm a demo bot from Rasa to help you with ordering shoes. How
+    text: Hi there! I'm a your flipbot assistant. How
       can I help you?
   utter_default:
   - text: I don't think I understand. Can you try providing more detail?
   - text: um, what did you just say to me?
   - text: beep, boop, don't understand
-  utter_ask_order_status_form_email:
-  - text: I can help you find the status of your order. What's your email address
+  utter_ask_order_status_form_phone:
+  - text: I can help you find the status of your order. What's your contact number,
       so I can find the order?
   utter_order_status:
-  - text: Based on the latest order from {email}, it looks like your order is currently {status}.
-  utter_ask_cancel_form_email:
+  - text: Based on the latest order from {phone}, it looks like your order is currently {status}.
+  utter_ask_cancel_form_phone:
   - text: Sorry to hear you want to cancel! To help find your order, can you please
-      provide your email address?
+      provide your contact number?
   utter_order_cancel_finish:
-  - text: Ok, I've cancelled the order for {email}. If you'd like to reorder, please visit your
+  - text: Ok, I've cancelled the order for {phone}. If you'd like to reorder, please visit your
       recent orders in your account history.
-  utter_ask_return_form_email:
+  utter_ask_return_form_phone:
   - text: Let's start that return. To help find your order, can you please provide
-      your email address?
+      your phone address?
   utter_return_finish:
   - text: Ok, I've kicked off your return. You should be receiving a return label
       in your inbox. Please send it in the next 14 days!
-  utter_ask_product_updates_form_email:
-  - text: I can keep you up to date with our weekly email about product updates! If
-      you'd like to be added to the list, please add your email address.
+  utter_ask_product_updates_form_phone:
+  - text: I can keep you up to date with our weekly e-mail about product updates! If
+      you'd like to be added to the list, please add your phone address.
   utter_product_updates_finish:
   - text: Alright, you're subscribed!
-  utter_ask_credit_registeration_form_email:
-  - text: I can help you register your credit card.
+  utter_ask_credit_registeration_form_phone:
+  - text: I can help you register for the Flipkart Axis Credit Card which offers you unlimited cashbacks on some of the most popular apps. To begin with I would like to know your phone address or contact number so I can send you the further details.
   utter_credit_registeration_finish:
-  - text: Alright, I've registered your credit card.
-  utter_ask_pay_bills_form_email:
-  - text: I can help you pay your credit card bills.
+  - text: Alright, I've registered your application for the Flipkart Axis Credit Card. You will be reach out soon for further processes.
+  utter_ask_pay_bills_form_phone:
+  - text: I can guide you through the process of paying your Credit Card bills. 
   utter_pay_bills_finish:
-  - text: EMI, CONTACT
+  - text: You can pay through EMI or Netbanking. And for more further details on the payment process, please visit our banks website for more details.
   
   utter_product_stock_start:
   - text: I can help you find some shoes!
@@ -111,11 +111,11 @@ responses:
   - text: What color are you looking for?
   utter_product_stock_finish:
   - text: Looks like we have size {size} {color} shoes in stock!
-  utter_confirm_email:
-  - text: I already have your email on file. Would you like me to look up your order
-      under {email}?
+  utter_confirm_phone:
+  - text: I already have your phone on file. Would you like me to look up your order
+      under {phone}?
   utter_faq/alternate_info:
-  - text: Currenty we can only provide order information based on email.
+  - text: Currenty we can only provide order information based on phone.
   utter_faq/sizing_clarification:
   - text: Right now we only offer American sizes. We'll try to change this in the
       future!
@@ -131,7 +131,7 @@ responses:
   - text: yep I'm here.
   - text: unfortunately, I'm still listening.
   utter_chitchat/capabilities:
-  - text: I can help you start a return, subscribe to our emails, and even see if
+  - text: I can help you start a return, subscribe to our e-mails, and even see if
       we carry your desired shoes.
   utter_chitchat/mood_great:
   - text: Superb!
@@ -166,7 +166,7 @@ responses:
   utter_open_feedback: #this is to test the response was collected
   - text: Here's your lovely feedback - {open_feedback}
   utter_no_order:
-  - text: Hmm, seems like we don't have an order associated with that email
+  - text: Hmm, seems like we don't have an order associated with that phone
   utter_in_stock:
   - text: You're in luck! We have those in stock.
   utter_no_stock:
@@ -185,37 +185,37 @@ actions:
 forms:
   order_status_form:
     required_slots:
-      email:
-      - entity: email
+      phone:
+      - entity: phone
         type: from_entity
       - intent:
         - inform
         type: from_text
   cancel_form:
     required_slots:
-      email:
-      - entity: email
+      phone:
+      - entity: phone
         type: from_entity
   return_form:
     required_slots:
-      email:
-      - entity: email
+      phone:
+      - entity: phone
         not_intent: product_updates
         type: from_entity
   product_updates_form:
     required_slots:
-      email:
-      - entity: email
+      phone:
+      - entity: phone
         type: from_entity
   credit_form:
     required_slots:
-      email:
-      - entity: email
+      phone:
+      - entity: phone
         type: from_entity
   pay_bills_form:
     required_slots:
-      email:
-      - entity: email
+      phone:
+      - entity: phone
         type: from_entity
   product_stock_form:
     required_slots:

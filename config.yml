@@ -31,7 +31,7 @@ pipeline:
     # url of the running duckling server
     url: "http://localhost:8000"
     # dimensions to extract
-    dimensions: ["number", "email"]
+    dimensions: ["number", "phone"]
     # allows you to configure the locale, by default the language is
     # used
     # locale: "de_DE"

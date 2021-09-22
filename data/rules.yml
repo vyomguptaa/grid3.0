@@ -18,7 +18,7 @@ rules:
 
 # order status
 
-- rule: Activate email form for order status
+- rule: Activate phone form for order status
   steps:
   - intent: order_status
   - action: action_deactivate_loop
@@ -48,7 +48,7 @@ rules:
 
 # cancel order
 
-- rule: Activate email form for cancelling order
+- rule: Activate phone form for cancelling order
   steps:
   - intent: order_cancel
   - action: action_deactivate_loop
@@ -78,7 +78,7 @@ rules:
 
 # return
 
-- rule: Activate email form for returning item
+- rule: Activate phone form for returning item
   steps:
   - intent: return
   - action: action_deactivate_loop
@@ -108,7 +108,7 @@ rules:
 
 # product updates
 
-- rule: Activate email form for product updates
+- rule: Activate phone form for product updates
   steps:
   - intent: product_updates
   - action: action_deactivate_loop
@@ -191,7 +191,7 @@ rules:
 
 # register for cc
 
-- rule: Activate email form for product updates
+- rule: Activate phone form for product updates
   steps:
   - intent: credit_registeration
   - action: action_deactivate_loop
@@ -234,7 +234,7 @@ rules:
 
 # pay bills
 
-- rule: Activate email form for product updates
+- rule: Activate phone form for product updates
   steps:
   - intent: pay_bills
   - action: action_deactivate_loop
