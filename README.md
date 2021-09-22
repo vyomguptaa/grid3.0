@@ -64,13 +64,13 @@ under the hood. To simply talk to the bot, you can remove this flag.
 3. Cancel an item
 4. Search a product inventory for shoes
 5. Subscribe to product updates
+6. Register for the Flipkart Axis credit card
+7. Pay credit card bills
 
-The bot can handle switching forms and cancelling a form, but not resuming a form after switching yet.
 
 The main flows have the bot retrieving or changing information in a SQLite database (the file `example.db`). You can use `initialize.db` to change the data that exists in this file.
 
-For the purposes of illustration, the bot has orders for the following email addresses:
-
+For the purposes of illustration, the bot has orders for the following contact numbers:
 - `example@rasa.com`
 - `me@rasa.com`
 - `me@gmail.com`
@@ -113,7 +113,3 @@ the [public image on Dockerhub](https://hub.docker.com/repository/docker/cdesmar
 It is recommended to use an [automated CI/CD process](https://rasa.com/docs/rasa/user-guide/setting-up-ci-cd) to keep your action server up to date in a production environment.
 
 
-## :gift: License
-Licensed under the GNU General Public License v3. Copyright 2021 Rasa Technologies
-GmbH. [Copy of the license](https://github.com/RasaHQ/retail-demo/blob/main/LICENSE).
-Licensees may convey the work under this license. There is no warranty for the work.
