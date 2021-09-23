@@ -71,9 +71,17 @@ under the hood. To simply talk to the bot, you can remove this flag.
 The main flows have the bot retrieving or changing information in a SQLite database (the file `example.db`). You can use `initialize.db` to change the data that exists in this file.
 
 For the purposes of illustration, the bot has orders for the following contact numbers:
-- `example@rasa.com`
-- `me@rasa.com`
-- `me@gmail.com`
+
+- `8171 427 101`
+- `9356 927 800`
+- `9999 888 777`
+- `9898 989 898`
+- `9123 456 789`
+- `9191 919 191`
+- `9999 999 999`
+- `888 888 8888`
+- `8989 898 989`
+- `878 7878 787`
 
 And these are the shoes that should show as in stock (size, color):
 
@@ -87,7 +95,11 @@ inventory = [(7, 'blue'),
              (7, 'black'),
              (8, 'black'),
              (9, 'black'),
-             (10, 'black')
+             (10, 'black'),
+             (8, 'green'),
+             (7, 'purple'),
+             (10, 'white'),
+             (9, 'red'),
             ]
 ```
 
