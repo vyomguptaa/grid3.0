@@ -65,7 +65,7 @@ under the hood. To simply talk to the bot, you can remove this flag.
 4. Search a product inventory for shoes
 5. Subscribe to product updates
 6. Register for the Flipkart Axis credit card
-7. Pay credit card bills
+7. how to pay the credit card bills
 
 
 The main flows have the bot retrieving or changing information in a SQLite database (the file `example.db`). You can use `initialize.db` to change the data that exists in this file.
