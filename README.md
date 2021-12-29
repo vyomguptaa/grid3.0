@@ -73,7 +73,6 @@ The main flows have the bot retrieving or changing information in a SQLite datab
 For the purposes of illustration, the bot has orders for the following contact numbers:
 
 - `8171 427 101`
-- `9356 927 800`
 - `9999 888 777`
 - `9898 989 898`
 - `9123 456 789`
